@@ -13,6 +13,6 @@ class logistica extends Model
         'cadeirasQTD',
         'convidadosQTD',
         'mesasQTD',
-        'clienteID'
+        'cliente_ID'
     ];
 }

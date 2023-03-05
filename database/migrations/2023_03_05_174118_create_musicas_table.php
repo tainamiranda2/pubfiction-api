@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('musicas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cliente_ID');
+
+            $table->string( 'banda');
+            $table->integer('horaCantada');
             $table->timestamps();
+            $table->foreign('cliente_ID')->references('id')->on('modelsclientes');
         });
     }
 

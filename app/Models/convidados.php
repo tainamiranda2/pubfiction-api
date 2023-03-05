@@ -12,6 +12,6 @@ class convidados extends Model
         'nome',
          'email',
         'celular',
-        'clienteID'
+        'cliente_ID'
     ];
 }

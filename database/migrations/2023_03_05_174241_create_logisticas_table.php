@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('logisticas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cliente_ID');
+
+            $table->string(  'nome');
+            $table->integer('cadeirasQTD');
+            $table->integer( 'convidadosQTD');
+            $table->integer( 'mesasQTD');
             $table->timestamps();
+            $table->foreign('cliente_ID')->references('id')->on('modelsclientes');
+
         });
     }
 

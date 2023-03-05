@@ -9,7 +9,7 @@ class musica extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'clienteID',
+        'cliente_ID',
          'banda',
         'horaCantada'
     ];

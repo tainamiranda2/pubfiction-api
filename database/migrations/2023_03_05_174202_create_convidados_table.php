@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('convidados', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cliente_ID');
+
+            $table->string(  'nome');
+            $table->string( 'email');
+            $table->integer( 'celular');
+            $table->integer( 'clienteID');
             $table->timestamps();
+            $table->foreign('cliente_ID')->references('id')->on('modelsclientes');
         });
     }
 

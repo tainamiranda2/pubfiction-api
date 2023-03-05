@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('horarios', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cliente_ID');
+
+            $table->integer(  'clienteID');
+            $table->dateTime('horaInicial');
+            $table->dateTime( 'horaFinal');
             $table->timestamps();
+            $table->foreign('cliente_ID')->references('id')->on('modelsclientes');
         });
     }
 

@@ -9,7 +9,7 @@ class tema extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'clienteID',
+        'cliente_ID',
          'nomeTema',
         'corMesa',
         'corCadeira',

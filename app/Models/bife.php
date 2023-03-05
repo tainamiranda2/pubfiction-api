@@ -9,7 +9,7 @@ class bife extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'clienteID', 
+        'cliente_ID', 
         'pratoprincipal',
         'pratoentrada',
         'opcaolanche1',

@@ -13,6 +13,23 @@ return new class extends Migration
     {
         Schema::create('bives', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cliente_ID');
+            $table->string ('pratoprincipal');
+            $table->string ('pratoentrada');
+            $table->string('opcaolanche1');
+            $table->string( 'opcaolanche2');
+            $table->string('opcaolanche3');
+            $table->string('bebidaA');
+            $table->string ('bebidaB');
+            $table->integer('pratoprincipalQtd');
+            $table->integer('pratoentradaQTD');
+            $table->integer( 'opcaolanche1QTD');
+            $table->integer('opcaolanche2QTD');
+            $table->integer('opcaolanche3QTD');
+            $table->integer( 'bebidaAQTD');
+            $table->integer ('bebidaBQTD');
+
+            $table->foreign('cliente_ID')->references('id')->on('modelsclientes');
             $table->timestamps();
         });
     }

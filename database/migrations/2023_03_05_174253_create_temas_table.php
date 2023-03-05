@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('temas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cliente_ID');
+
+            $table->string(  'nomeTema');
+            $table->string( 'corMesa');
+            $table->string(  'corCadeira');
             $table->timestamps();
+            $table->foreign('cliente_ID')->references('id')->on('modelsclientes');
+
         });
     }
 

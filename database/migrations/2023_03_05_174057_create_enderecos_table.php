@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('enderecos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cliente_ID');
+
+            $table->string   ('rua');
+            $table->string ('bairro');
+            $table->string ('cidade');
+            $table->string ( 'estado');
+            $table->string  ('complemento');
+            $table->integer(  'numeroCasa');
             $table->timestamps();
+            $table->foreign('cliente_ID')->references('id')->on('modelsclientes');
+
         });
     }
 
